@@ -1,0 +1,31 @@
+to add a feature, you must have
+#used to select desired screen
+if curScreen == "SCREEN NAME HERE":
+  while GUIUPDATE == False:
+  
+  
+    #code here
+    
+    #background task must be called when a feature is idle to ensure that it executes as often as possible 
+    backgroundTask()
+    
+    #used to ensure that the firmware can move between screens
+    if left.value() == 0:
+      curScreen = "next screen name"
+      GUIUPDATE = True
+    if right.value() == 0:
+      curScreen = "previus screen name"
+      GUIUPDATE = True
+
+ensure that you edit the code of the previus sceen to point to your new feature, ie 
+    if left.value() == 0:
+      curScreen = "next screen name"
+      GUIUPDATE = True
+would become 
+    if left.value() == 0:
+      curScreen = "SCREEN NAME HERE"
+      GUIUPDATE = True
+in the previus screen code 
+
+the screen will not clear itself when switching screens 
+you must call display.clear() to clear the screen 
