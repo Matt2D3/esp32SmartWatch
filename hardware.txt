@@ -1,0 +1,17 @@
+screen
+ssd1351 oled display
+
+rtc module
+ds1302 rtc module
+
+interface
+generic 5 way button
+
+battery
+generic 18650 cell 
+
+esp32 
+lolin32 
+
+battery protection
+generic single cell lipo protection board 
